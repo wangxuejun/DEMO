@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 200px;
+				height: 200px;
+				margin: 0 auto;				
+				border: 10px solid black;
+				padding: 4px;	
+				background-color: black;
+				color: white;	
+				cursor:crosshair;		
+			}
+			#box.hover{
+				background-color: white;
+				color: red;
+				border: 10px solid red;
+			}
+		</style>	
+	
+	</head>
+	<body>
+		<div id="box">
+			<p>鼠标移入改变样式，移出恢复.用js实现</p>
+			
+		</div>
+		<script type="text/javascript">
+			var box=document.getElementById("box");
+			box.onmouseover=function(){
+				box.className="hover"
+			}
+			box.onmouseout=function(){
+				box.className=""
+			}
+		</script>
+	</body>
+</html>

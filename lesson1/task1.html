@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>第一课第一节</title>
+		<style type="text/css">
+			.div{
+				width: 400px;
+				height: 500px;
+				margin: 0 auto;
+			}
+			.nav{
+				width: 300px;
+				height: 30px;
+				margin: 0 auto;
+			}
+			button{
+				width: 50px;
+				line-height: 30px;
+			}
+			#box{
+				width: 100px;
+				height: 100px;
+				background-color: black;
+				margin: 50px auto;
+			}
+			#tip{
+				position: absolute;
+				top: 10px;
+				left: 20px;
+				width: 200px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div">
+			<div class="nav">
+				<button id="bat1">变宽</button>
+				<button id="bat2">变高</button>
+				<button id="bat3">变色</button>
+				<button id="bat4">隐藏</button>
+				<button id="bat5">重置</button>
+			</div>
+			<div id="box"></div>
+		</div>
+		<div id="tip">
+			<p>将属性和值保存在数组中再分别对box改变样式；通过变量改变的样式必须是:<b>elemt.style[attr]=value</b></p>
+		</div>
+		<script>
+		/*	
+			var bat1=document.getElementById("bat1");
+			var bat2=document.getElementById("bat2");
+			var bat3=document.getElementById("bat3");
+			var bat4=document.getElementById("bat4");
+			var bat5=document.getElementById("bat5");
+			var box=document.getElementById("box")
+			
+			bat1.onclick=function(){
+				box.style.width="200px"	;
+			}
+			bat2.onclick=function(){
+				box.style.height="200px";
+			}
+			bat3.onclick=function(){
+				box.style.backgroundColor="red";
+			}
+			bat4.onclick=function(){
+				box.style.display="none";
+			}
+			bat5.onclick=function(){
+				box.style.cssText="";
+				box.style.display="block"			
+			}
+		*/	
+			
+			var bat=document.getElementsByTagName("button");
+			var box=document.getElementById("box");
+			
+			var att=["width","height","background-color","display","display"];
+			var value=["200px","200px","red","none","block"]
+			
+			for(var i=0;i<bat.length;i++){
+				
+				bat[i].index=i;
+				bat[i].onclick=function(){
+					var j=this.index;
+					box.style.cssText="";
+					box.style[att[j]]=value[j]
+				}
+			}
+			
+			
+
+			
+			
+		</script>
+	</body>
+</html>

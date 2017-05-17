@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>函数接受参数并弹出</title>
+		<style type="text/css">
+			.div{
+				width: 200px;
+				margin: 0 auto;
+			}
+			input{
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="div">
+			<input type="text" name="city" id="city" value="嘉兴市" />
+			<input type="text" name="road" id="road" value="秀洲区" />
+			<input type="button" value="传参" />
+		</div>
+		<script type="text/javascript">
+			var city=document.getElementsByTagName("input")[0];
+			var road=document.getElementsByTagName("input")[1];
+			var bat=document.getElementsByTagName("input")[2];
+			function say(citys,roads){
+				alert(citys.value);
+				alert(roads.value)
+			}
+			
+			bat.onclick=function(){
+					
+					say(city,road)
+					
+			}
+			
+			
+			
+		</script>
+	</body>
+</html>

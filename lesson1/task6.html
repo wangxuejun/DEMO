@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				text-align: center;	
+			}
+			label{
+				position: relative;
+			}
+			#tip{
+				width: 200px;		
+				text-align: left;
+				position: absolute;
+				left:0px;
+				top: 30px;
+				border: 1px solid red;
+				background-color: yellow;
+				font-size: 12px;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"> 
+		<label><input type="checkbox" name="" id="" value="" />
+		两周内自动登录
+		<div id="tip">为了您的信息安全，请不要在网吧或公用电脑上使用此功能！</div>
+		</label>
+		
+		</div>
+		<script type="text/javascript">
+			var label=document.getElementsByTagName("label")[0];
+			var tip=document.getElementById("tip");
+			label.onmouseover=function(){
+				tip.style.display="block"
+			}
+			label.onmouseout=function(){
+				tip.style.display="none"
+			}
+		</script>
+	</body>
+</html>
