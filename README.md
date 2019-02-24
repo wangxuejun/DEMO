@@ -1,2 +1,2 @@
 # DEMO
-我的jsdemo
+我的jsdemo-dev
